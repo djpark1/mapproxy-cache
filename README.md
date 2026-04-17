@@ -85,3 +85,13 @@ docker compose build --no-cache mapproxy
 docker compose up -d mapproxy
 docker compose logs -f mapproxy
 ```
+
+- 증상: `ModuleNotFoundError: No module named 'pkg_resources'`
+- 조치: 최신 코드 pull 후 이미지 재빌드(요구사항에 setuptools 포함)
+
+```bash
+git pull origin develop
+docker compose build --no-cache mapproxy
+docker compose up -d mapproxy
+docker compose logs -f mapproxy
+```
