@@ -74,3 +74,14 @@ mapproxy-util serve-develop -b 0.0.0.0:8080 mapproxy.yaml
 - 서비스/레이어 설정: `mapproxy.yaml`
 - 시드 범위/레벨 설정: `seed.yaml`
 - 캐시 저장 위치: `cache_data/`
+
+## 트러블슈팅
+
+- 증상: `ImportError: could not find pyproj (Python library) or libproj`
+- 조치: 이미지를 재빌드해서 의존성을 다시 설치
+
+```bash
+docker compose build --no-cache mapproxy
+docker compose up -d mapproxy
+docker compose logs -f mapproxy
+```
