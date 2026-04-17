@@ -35,26 +35,38 @@ caches:
     grids: [webmercator]
     sources: [scl_facility_wms]
     format: image/png
+    meta_size: [1, 1]
+    meta_buffer: 0
   scl_basemap_cache:
     grids: [webmercator]
     sources: [scl_basemap_wms]
     format: image/png
+    meta_size: [1, 1]
+    meta_buffer: 0
   scl_fac_grade_cache:
     grids: [webmercator]
     sources: [scl_fac_grade_wms]
     format: image/png
+    meta_size: [1, 1]
+    meta_buffer: 0
   scl_etc_cache:
     grids: [webmercator]
     sources: [scl_etc_wms]
     format: image/png
+    meta_size: [1, 1]
+    meta_buffer: 0
   scl_user_fac_cache:
     grids: [webmercator]
     sources: [scl_user_fac_wms]
     format: image/png
+    meta_size: [1, 1]
+    meta_buffer: 0
   scl_demand_point_cache:
     grids: [webmercator]
     sources: [scl_demand_point_wms]
     format: image/png
+    meta_size: [1, 1]
+    meta_buffer: 0
 
 sources:
   scl_facility_wms:
