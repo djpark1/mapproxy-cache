@@ -75,7 +75,7 @@ sources:
       url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_facility
       styles: ""
-      transparent: true
+      transparent: "TRUE"
       format: image/png
     forward_req_params: [cql_filter]
     wms_opts:
@@ -88,7 +88,7 @@ sources:
       url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_basemap
       styles: ""
-      transparent: true
+      transparent: "TRUE"
       format: image/png
     forward_req_params: [cql_filter]
     wms_opts:
@@ -101,7 +101,7 @@ sources:
       url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_fac_grade
       styles: ""
-      transparent: true
+      transparent: "TRUE"
       format: image/png
     forward_req_params: [cql_filter]
     wms_opts:
@@ -114,7 +114,7 @@ sources:
       url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_etc
       styles: ""
-      transparent: true
+      transparent: "TRUE"
       format: image/png
     forward_req_params: [cql_filter]
     wms_opts:
@@ -127,7 +127,7 @@ sources:
       url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_user_fac
       styles: ""
-      transparent: true
+      transparent: "TRUE"
       format: image/png
     forward_req_params: [cql_filter]
     wms_opts:
@@ -140,7 +140,7 @@ sources:
       url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_demand_point
       styles: ""
-      transparent: true
+      transparent: "TRUE"
       format: image/png
     forward_req_params: [cql_filter]
     wms_opts:
