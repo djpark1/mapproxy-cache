@@ -60,10 +60,11 @@ sources:
   scl_facility_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc/ogc
+      url: http://59.6.157.153:8090/gssogc
       layers: scl_facility
       transparent: true
       format: image/png
+    forward_req_params: [cql_filter]
     wms_opts:
       version: 1.3.0
     supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
@@ -71,10 +72,11 @@ sources:
   scl_basemap_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc/ogc
+      url: http://59.6.157.153:8090/gssogc
       layers: scl_basemap
       transparent: true
       format: image/png
+    forward_req_params: [cql_filter]
     wms_opts:
       version: 1.3.0
     supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
@@ -82,10 +84,11 @@ sources:
   scl_fac_grade_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc/ogc
+      url: http://59.6.157.153:8090/gssogc
       layers: scl_fac_grade
       transparent: true
       format: image/png
+    forward_req_params: [cql_filter]
     wms_opts:
       version: 1.3.0
     supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
@@ -93,10 +96,11 @@ sources:
   scl_etc_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc/ogc
+      url: http://59.6.157.153:8090/gssogc
       layers: scl_etc
       transparent: true
       format: image/png
+    forward_req_params: [cql_filter]
     wms_opts:
       version: 1.3.0
     supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
@@ -104,10 +108,11 @@ sources:
   scl_user_fac_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc/ogc
+      url: http://59.6.157.153:8090/gssogc
       layers: scl_user_fac
       transparent: true
       format: image/png
+    forward_req_params: [cql_filter]
     wms_opts:
       version: 1.3.0
     supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
@@ -115,10 +120,11 @@ sources:
   scl_demand_point_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc/ogc
+      url: http://59.6.157.153:8090/gssogc
       layers: scl_demand_point
       transparent: true
       format: image/png
+    forward_req_params: [cql_filter]
     wms_opts:
       version: 1.3.0
     supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
