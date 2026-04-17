@@ -4,41 +4,130 @@ services:
     use_grid_names: true
   wmts:
   wms:
-    srs: ["EPSG:3857", "EPSG:4326"]
+    srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
     image_formats: ["image/png", "image/jpeg"]
     md:
       title: MapProxy Cache Server
       abstract: geolab-app GSS WMS caching proxy
 
 layers:
-  - name: gss_cache
-    title: geolab-app GSS WMS Cached Layer
-    sources: [gss_cache]
+  - name: scl_facility
+    title: scl_facility
+    sources: [scl_facility_cache]
+  - name: scl_basemap
+    title: scl_basemap
+    sources: [scl_basemap_cache]
+  - name: scl_fac_grade
+    title: scl_fac_grade
+    sources: [scl_fac_grade_cache]
+  - name: scl_etc
+    title: scl_etc
+    sources: [scl_etc_cache]
+  - name: scl_user_fac
+    title: scl_user_fac
+    sources: [scl_user_fac_cache]
+  - name: scl_demand_point
+    title: scl_demand_point
+    sources: [scl_demand_point_cache]
 
 caches:
-  gss_cache:
+  scl_facility_cache:
     grids: [webmercator]
-    sources: [gss_wms]
+    sources: [scl_facility_wms]
+    format: image/png
+  scl_basemap_cache:
+    grids: [webmercator]
+    sources: [scl_basemap_wms]
+    format: image/png
+  scl_fac_grade_cache:
+    grids: [webmercator]
+    sources: [scl_fac_grade_wms]
+    format: image/png
+  scl_etc_cache:
+    grids: [webmercator]
+    sources: [scl_etc_wms]
+    format: image/png
+  scl_user_fac_cache:
+    grids: [webmercator]
+    sources: [scl_user_fac_wms]
+    format: image/png
+  scl_demand_point_cache:
+    grids: [webmercator]
+    sources: [scl_demand_point_wms]
     format: image/png
 
 sources:
-  gss_wms:
+  scl_facility_wms:
     type: wms
     req:
-      # olab-app project GSS WMS endpoint
-      url: http://59.6.153:8090/gssogc
-      layers: gss
+      url: http://59.6.157.153:8090/gssogc/ogc
+      layers: scl_facility
       transparent: true
       format: image/png
-    supported_srs: ["EPSG:3857", "EPSG:4326"]
-    coverage:
-      bbox_srs: "EPSG:3857"
-      bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+    wms_opts:
+      version: 1.3.0
+    supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
+
+  scl_basemap_wms:
+    type: wms
+    req:
+      url: http://59.6.157.153:8090/gssogc/ogc
+      layers: scl_basemap
+      transparent: true
+      format: image/png
+    wms_opts:
+      version: 1.3.0
+    supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
+
+  scl_fac_grade_wms:
+    type: wms
+    req:
+      url: http://59.6.157.153:8090/gssogc/ogc
+      layers: scl_fac_grade
+      transparent: true
+      format: image/png
+    wms_opts:
+      version: 1.3.0
+    supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
+
+  scl_etc_wms:
+    type: wms
+    req:
+      url: http://59.6.157.153:8090/gssogc/ogc
+      layers: scl_etc
+      transparent: true
+      format: image/png
+    wms_opts:
+      version: 1.3.0
+    supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
+
+  scl_user_fac_wms:
+    type: wms
+    req:
+      url: http://59.6.157.153:8090/gssogc/ogc
+      layers: scl_user_fac
+      transparent: true
+      format: image/png
+    wms_opts:
+      version: 1.3.0
+    supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
+
+  scl_demand_point_wms:
+    type: wms
+    req:
+      url: http://59.6.157.153:8090/gssogc/ogc
+      layers: scl_demand_point
+      transparent: true
+      format: image/png
+    wms_opts:
+      version: 1.3.0
+    supported_srs: ["EPSG:3857", "EPSG:900913", "EPSG:4326"]
 
 grids:
   webmercator:
     base: GLOBAL_WEBMERCATOR
     origin: nw
+    srs: "EPSG:900913"
 
 globals:
   cache:
