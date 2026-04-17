@@ -31,17 +31,14 @@ sources:
       transparent: true
       format: image/png
     supported_srs: ["EPSG:3857", "EPSG:4326"]
-    coverage: world_mercator
+    coverage:
+      bbox_srs: "EPSG:3857"
+      bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
 
 grids:
   webmercator:
     base: GLOBAL_WEBMERCATOR
     origin: nw
-
-coverages:
-  world_mercator:
-    bbox_srs: EPSG:3857
-    bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
 
 globals:
   cache:
