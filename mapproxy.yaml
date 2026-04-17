@@ -1,0 +1,49 @@
+services:
+  demo:
+  tms:
+    use_grid_names: true
+  wmts:
+  wms:
+    srs: ["EPSG:3857", "EPSG:4326"]
+    image_formats: ["image/png", "image/jpeg"]
+    md:
+      title: MapProxy Cache Server
+      abstract: geolab-app GSS WMS caching proxy
+
+layers:
+  - name: gss_cache
+    title: geolab-app GSS WMS Cached Layer
+    sources: [gss_cache]
+
+caches:
+  gss_cache:
+    grids: [webmercator]
+    sources: [gss_wms]
+    format: image/png
+
+sources:
+  gss_wms:
+    type: wms
+    req:
+      # olab-app project GSS WMS endpoint
+      url: http://59.6.153:8090/gssogc
+      layers: gss
+      transparent: true
+      format: image/png
+    supported_srs: ["EPSG:3857", "EPSG:4326"]
+    coverage: world_mercator
+
+grids:
+  webmercator:
+    base: GLOBAL_WEBMERCATOR
+    origin: nw
+
+coverages:
+  world_mercator:
+    bbox_srs: EPSG:3857
+    bbox: [-20037508.34, -20037508.34, 20037508.34, 20037508.34]
+
+globals:
+  cache:
+    base_dir: ./cache_data
+    lock_dir: ./cache_data/locks

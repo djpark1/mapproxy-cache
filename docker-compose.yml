@@ -1,0 +1,16 @@
+services:
+  mapproxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mapproxy-cache
+    ports:
+      - "8091:8080"
+    volumes:
+      - ./mapproxy.yaml:/app/mapproxy.yaml:ro
+      - ./seed.yaml:/app/seed.yaml:ro
+      - mapproxy_cache:/app/cache_data
+    restart: unless-stopped
+
+volumes:
+  mapproxy_cache:
