@@ -60,8 +60,9 @@ sources:
   scl_facility_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc
+      url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_facility
+      styles: ""
       transparent: true
       format: image/png
     forward_req_params: [cql_filter]
@@ -72,8 +73,9 @@ sources:
   scl_basemap_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc
+      url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_basemap
+      styles: ""
       transparent: true
       format: image/png
     forward_req_params: [cql_filter]
@@ -84,8 +86,9 @@ sources:
   scl_fac_grade_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc
+      url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_fac_grade
+      styles: ""
       transparent: true
       format: image/png
     forward_req_params: [cql_filter]
@@ -96,8 +99,9 @@ sources:
   scl_etc_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc
+      url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_etc
+      styles: ""
       transparent: true
       format: image/png
     forward_req_params: [cql_filter]
@@ -108,8 +112,9 @@ sources:
   scl_user_fac_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc
+      url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_user_fac
+      styles: ""
       transparent: true
       format: image/png
     forward_req_params: [cql_filter]
@@ -120,8 +125,9 @@ sources:
   scl_demand_point_wms:
     type: wms
     req:
-      url: http://59.6.157.153:8090/gssogc
+      url: http://59.6.157.153:8090/gssogc/ogc
       layers: scl_demand_point
+      styles: ""
       transparent: true
       format: image/png
     forward_req_params: [cql_filter]
